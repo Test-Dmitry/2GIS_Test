@@ -1,0 +1,418 @@
+{
+	"id": "0017d0f9-b3f0-44ad-a176-1e366e955396",
+	"name": "2ГИС",
+	"timestamp": "2025-10-02T15:35:35.675Z",
+	"collection_id": "43323835-687c4486-902f-40f4-88dc-291d10a9f9a3",
+	"folder_id": "43323835-269704ac-0c70-45d0-bb3c-3813abfd386a",
+	"environment_id": "43323835-0d22a35c-d6e1-4310-9cd1-f6e2ab40c931",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-02T15:35:05.183Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6abf06b7-1d9e-455a-8baa-0f9593006cee",
+			"name": "Отсутсвует параметр title",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 695,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				695
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ef581fba-700f-4580-927e-9a7500216d6c",
+			"name": "Отстствует параметр lat",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 740,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				740
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a8620c99-edba-4865-9a30-adad6d133470",
+			"name": "Отсутствует параметр lon",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 731,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				731
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9ac6d34a-f517-480a-b705-8ba76afbc38a",
+			"name": "Параметр title пустой",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 680,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				680
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1e3d057b-d9fb-48a3-bd55-fd81509007c5",
+			"name": "В названии > 999 символов",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 707,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				707
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4716acb6-263e-49d9-851f-391bd87efb30",
+			"name": "Параметр title из одного пробела",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 672,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				672
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fa08e6b5-5d90-4c64-84c6-25983fdcfca6",
+			"name": "Параметр lat строкой",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 690,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				690
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "16220803-d37a-4824-b8c9-4a3cf3630909",
+			"name": "Широта -90.000001",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 712,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				712
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b594ea0f-1135-4f2c-8004-5b65601ade88",
+			"name": "Широта 90.000001",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 673,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				673
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "94c661d3-1780-4a9f-9341-1465af6743d2",
+			"name": "Параметр lat пустой",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 707,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				707
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d8af9563-b2a9-4675-8c72-c4ada2a148b0",
+			"name": "Параметр lon пустой",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 672,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				672
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2ae16ab3-354f-4b28-8533-d416ed1f838a",
+			"name": "Параметр lon строкой",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 744,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				744
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1d4019c0-7f4f-4f7a-b057-07ad85323f41",
+			"name": "Долгота -180.000001",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 739,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				739
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8c20c583-65f1-4479-ae93-ae98b9986a36",
+			"name": "Долгота 180.000001",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 719,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				719
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "18f8111d-50ba-4ce8-9aee-9c7cdef9d163",
+			"name": "Несуществующий цвет",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 724,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				724
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c944c3bd-982d-4baf-a009-693791aca9f3",
+			"name": "Цвет в нижнем регистре",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 718,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				718
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8a77aaa8-446a-4c03-8e9d-9ab780f1e53d",
+			"name": "Лишний параметр в запросе",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 747,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				747
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "60c34e12-794d-422d-8839-a55df6ca3b47",
+			"name": "Замена Content-type",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 707,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				707
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 12777,
+	"collection": {
+		"requests": [
+			{
+				"id": "6abf06b7-1d9e-455a-8baa-0f9593006cee",
+				"method": "POST"
+			},
+			{
+				"id": "ef581fba-700f-4580-927e-9a7500216d6c",
+				"method": "POST"
+			},
+			{
+				"id": "a8620c99-edba-4865-9a30-adad6d133470",
+				"method": "POST"
+			},
+			{
+				"id": "9ac6d34a-f517-480a-b705-8ba76afbc38a",
+				"method": "POST"
+			},
+			{
+				"id": "1e3d057b-d9fb-48a3-bd55-fd81509007c5",
+				"method": "POST"
+			},
+			{
+				"id": "4716acb6-263e-49d9-851f-391bd87efb30",
+				"method": "POST"
+			},
+			{
+				"id": "fa08e6b5-5d90-4c64-84c6-25983fdcfca6",
+				"method": "POST"
+			},
+			{
+				"id": "16220803-d37a-4824-b8c9-4a3cf3630909",
+				"method": "POST"
+			},
+			{
+				"id": "b594ea0f-1135-4f2c-8004-5b65601ade88",
+				"method": "POST"
+			},
+			{
+				"id": "94c661d3-1780-4a9f-9341-1465af6743d2",
+				"method": "POST"
+			},
+			{
+				"id": "d8af9563-b2a9-4675-8c72-c4ada2a148b0",
+				"method": "POST"
+			},
+			{
+				"id": "2ae16ab3-354f-4b28-8533-d416ed1f838a",
+				"method": "POST"
+			},
+			{
+				"id": "1d4019c0-7f4f-4f7a-b057-07ad85323f41",
+				"method": "POST"
+			},
+			{
+				"id": "8c20c583-65f1-4479-ae93-ae98b9986a36",
+				"method": "POST"
+			},
+			{
+				"id": "18f8111d-50ba-4ce8-9aee-9c7cdef9d163",
+				"method": "POST"
+			},
+			{
+				"id": "c944c3bd-982d-4baf-a009-693791aca9f3",
+				"method": "POST"
+			},
+			{
+				"id": "8a77aaa8-446a-4c03-8e9d-9ab780f1e53d",
+				"method": "POST"
+			},
+			{
+				"id": "60c34e12-794d-422d-8839-a55df6ca3b47",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,374 @@
+{
+	"id": "ded229ea-141f-45ac-8a7f-1fd158a43490",
+	"name": "2ГИС",
+	"timestamp": "2025-10-02T14:37:00.902Z",
+	"collection_id": "43323835-687c4486-902f-40f4-88dc-291d10a9f9a3",
+	"folder_id": "43323835-c01d33d0-15c0-4b7d-a2ff-2716e3879d18",
+	"environment_id": "43323835-0d22a35c-d6e1-4310-9cd1-f6e2ab40c931",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-02T14:36:12.451Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "44a81a89-135e-45cc-983f-2027133c7fa5",
+			"name": "Smoke \"Создание без цвета\"",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 740,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				740
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "166459f8-455f-4c75-98e0-6dd77eb379a3",
+			"name": "Smoke \"Создание с цветом\"",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 718,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				718
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e6a73563-ad63-4a92-a78f-5022c3aa0abd",
+			"name": "Smoke Без токена",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 707,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				707
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d3ef24f8-3f84-4039-8faf-eb873327d36a",
+			"name": "Название с одним символом",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 734,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				734
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "451f31fd-c919-4887-aa4d-46dc3b87c9d3",
+			"name": "Название с 999 символами",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 693,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				693
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "63c33b40-4373-4a11-b463-4f28c0a25cbc",
+			"name": "Название с цифрами",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 673,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				673
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "71401d97-b958-4a05-a9d8-cb9130a3032a",
+			"name": "Название со знаками препинания",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 662,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				662
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fcdd57ad-b252-4635-b09b-dbf59a546131",
+			"name": "Широта 90",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 729,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				729
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "99dca73f-f36f-4418-a361-f946a76a78cf",
+			"name": "Широта -90",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 680,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				680
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3eea9616-97ce-4289-b83a-7a3b2d6b9581",
+			"name": "Широта 0",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 716,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				716
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "36c492e4-ab22-4126-8d6b-8c4eb0762ed1",
+			"name": "Долгота -180",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 3686,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3686
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e30993f3-c2f8-452a-950d-fed5f7d04067",
+			"name": "Долгота 180",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 800,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				800
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b2c7c7c5-4849-4c20-aa9a-bd9ff0db0974",
+			"name": "Цвет Yellow",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 664,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				664
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f5770a67-678d-4ce5-b79d-81a5025df318",
+			"name": "Долгота 0",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 722,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				722
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dd3d8d53-8087-400e-b0eb-e5dccd5b50dc",
+			"name": "Цвет Blue",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 753,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				753
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "10873969-1f65-4b42-9696-6eae83628d08",
+			"name": "Цвет Green",
+			"url": "https://regions-test.2gis.com/v1/favorites",
+			"time": 697,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				697
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 14374,
+	"collection": {
+		"requests": [
+			{
+				"id": "44a81a89-135e-45cc-983f-2027133c7fa5",
+				"method": "POST"
+			},
+			{
+				"id": "166459f8-455f-4c75-98e0-6dd77eb379a3",
+				"method": "POST"
+			},
+			{
+				"id": "e6a73563-ad63-4a92-a78f-5022c3aa0abd",
+				"method": "POST"
+			},
+			{
+				"id": "d3ef24f8-3f84-4039-8faf-eb873327d36a",
+				"method": "POST"
+			},
+			{
+				"id": "451f31fd-c919-4887-aa4d-46dc3b87c9d3",
+				"method": "POST"
+			},
+			{
+				"id": "63c33b40-4373-4a11-b463-4f28c0a25cbc",
+				"method": "POST"
+			},
+			{
+				"id": "71401d97-b958-4a05-a9d8-cb9130a3032a",
+				"method": "POST"
+			},
+			{
+				"id": "fcdd57ad-b252-4635-b09b-dbf59a546131",
+				"method": "POST"
+			},
+			{
+				"id": "99dca73f-f36f-4418-a361-f946a76a78cf",
+				"method": "POST"
+			},
+			{
+				"id": "3eea9616-97ce-4289-b83a-7a3b2d6b9581",
+				"method": "POST"
+			},
+			{
+				"id": "36c492e4-ab22-4126-8d6b-8c4eb0762ed1",
+				"method": "POST"
+			},
+			{
+				"id": "e30993f3-c2f8-452a-950d-fed5f7d04067",
+				"method": "POST"
+			},
+			{
+				"id": "b2c7c7c5-4849-4c20-aa9a-bd9ff0db0974",
+				"method": "POST"
+			},
+			{
+				"id": "f5770a67-678d-4ce5-b79d-81a5025df318",
+				"method": "POST"
+			},
+			{
+				"id": "dd3d8d53-8087-400e-b0eb-e5dccd5b50dc",
+				"method": "POST"
+			},
+			{
+				"id": "10873969-1f65-4b42-9696-6eae83628d08",
+				"method": "POST"
+			}
+		]
+	}
+}

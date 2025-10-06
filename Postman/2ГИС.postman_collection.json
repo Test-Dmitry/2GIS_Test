@@ -1,0 +1,1536 @@
+{
+	"info": {
+		"_postman_id": "687c4486-902f-40f4-88dc-291d10a9f9a3",
+		"name": "2ГИС",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43323835"
+	},
+	"item": [
+		{
+			"name": "Smoke+позитивные",
+			"item": [
+				{
+					"name": "Проверка получения токена",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_URL}}auth/tokens",
+							"host": [
+								"{{base_URL}}auth"
+							],
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Smoke \"Создание без цвета\"",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "55.05",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "88.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Smoke \"Создание с цветом\"",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "RED",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Smoke Без токена",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название с одним символом",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "F",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название с 999 символами",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название с цифрами",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название со знаками препинания",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка, кофейня",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "89.09",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Широта 90",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Широта -90",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "-90",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Широта 0",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "98.08",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Долгота -180",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "-180",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Долгота 180",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "180",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Цвет Yellow",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "YELLOW",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Долгота 0",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Цвет Blue",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "BLUE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Цвет Green",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Негативные",
+			"item": [
+				{
+					"name": "Отсутсвует параметр title",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lat",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "180",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Отстствует параметр lat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Отсутствует параметр lon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Централка",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр title пустой",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "В названии > 999 символов",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр title из одного пробела",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название содержит спецсимволы",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": " ",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр lat строкой",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "string",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Широта -90.000001",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "-90.000001",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Широта 90.000001",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "90.000001",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр lat пустой",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр lon пустой",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Параметр lon строкой",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "string",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Долгота -180.000001",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "-180.000001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Долгота 180.000001",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "GREEN",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "180.000001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Несуществующий цвет",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "BLACK",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Цвет в нижнем регистре",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "red",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Лишний параметр в запросе",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Ff",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "RED",
+									"type": "text"
+								},
+								{
+									"key": "lon",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "count",
+									"value": "Russia",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Замена Content-type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"title\": \"Freeman’s\",\r\n\"lat\": 45.05,\r\n\"lon\": 78.08,\r\n\"color\": \"RED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}favorites",
+							"host": [
+								"{{base_URL}}favorites"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					"// Проверяем имя запроса\r",
+					"if (pm.info.requestName === \"Smoke Без токена\") {\r",
+					"    // Пропускаем выполнение скрипта для этого запроса\r",
+					"    return;\r",
+					"}\r",
+					"\r",
+					"// Pre-request Script для /v1/favorites\r",
+					"pm.sendRequest({\r",
+					"    url: \"https://regions-test.2gis.com/v1/auth/tokens\",\r",
+					"    method: \"POST\"\r",
+					"}, function (err, res) {\r",
+					"    if (err) throw err;\r",
+					"\r",
+					"    let setCookieHeader = res.headers.get(\"Set-Cookie\");\r",
+					"    let tokenMatch = setCookieHeader.match(/token=([^;]+);/);\r",
+					"    if (tokenMatch) {\r",
+					"        let tokenValue = tokenMatch[1];\r",
+					"\r",
+					"        // Добавляем Cookie Header в текущий запрос\r",
+					"        pm.request.headers.upsert({\r",
+					"            key: \"Cookie\",\r",
+					"            value: \"token=\" + tokenValue\r",
+					"        });\r",
+					"\r",
+					"        console.log(\"Token set:\", tokenValue);\r",
+					"    }\r",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_URL",
+			"value": "https://regions-test.2gis.com/v1/"
+		}
+	]
+}
